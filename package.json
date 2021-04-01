@@ -1,0 +1,102 @@
+{
+  "name": "@mastree-github/mastree-ui-library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": "git://github.com/Mastree-Github/mastree-ui-library.git",
+  "version": "1.0.5",
+  "description": "UI library for all the platforms used across mastree",
+  "private": false,
+  "main": "dist/index.js",
+  "style": "dist/index.css",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "dependencies": {
+    "@babel/preset-flow": "^7.12.1",
+    "@rollup/plugin-url": "^6.0.0",
+    "@svgr/rollup": "^5.5.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.0",
+    "classnames": "^2.2.6",
+    "postcss": "^8.2.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-inlinesvg": "^2.2.2",
+    "react-lottie": "^1.2.3",
+    "react-redux": "^7.2.2",
+    "react-scripts": "4.0.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-react-svg": "^3.0.3",
+    "rollup-plugin-url": "^3.0.1",
+    "styled-components": "5.1.1",
+    "typescript": "^4.0.3",
+    "web-vitals": "^0.2.4"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^17.0.0",
+    "react-dom": "^15.0.0 || ^17.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "build-storybook": "build-storybook -s public",
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel ./src/components -d dist --copy-files",
+    "start": "rollup -c -w",
+    "storybook": "start-storybook -p 6006 -s public",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@rollup/plugin-json": "^4.1.0",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/node-logger": "^6.1.11",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.11",
+    "@types/classnames": "^2.2.11",
+    "@types/react": "^16.14.2",
+    "@types/react-redux": "^7.1.15",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "node-sass": "^5.0.0",
+    "path": "^0.12.7",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "sass-loader": "^10.1.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
